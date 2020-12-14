@@ -1,0 +1,356 @@
+/* IRÁ ANTES DE LA HERO SECTION */
+
+/*FUENTES*/
+
+@font-face{
+    src: url('../tipografias/Raleway-Heavy.ttf');
+    font-family: rotulo;
+  }
+  @font-face{
+    src: url('../tipografias/Raleway-Medium.ttfM');
+    font-family: eltexto;
+  }
+  
+  
+  .iframe-responsive {position: relative;
+                      overflow: hidden;
+                      width: 100%;
+                      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */}
+  .iframe-content {position: absolute;
+                   top: 0;
+                   left: 0;
+                   bottom: 0;
+                   right: 0;
+                   width: 100%;
+                   height: 100%;}
+  
+  /* CONTAINER */
+  section::after { 
+    content: "";
+    display: block; 
+    clear: both;
+    margin: auto;
+  }
+  /* Add a black background color to the top navigation */
+  body {background-color: rgb( 252, 250, 252);
+        color: black;
+        font-family:eltexto;}
+  
+  #container {width:80%;  /* este será el ancho de todas las secciones */
+              margin:auto;
+              display: block;
+  }
+  a {text-decoration:none;
+     color:lightblue;
+    }
+  a:hover{color:palegreen;}   /* Cuando pases el cursor por encima del enlace, cambia de color, sin pinchar*/
+  
+  button {cursor: pointer;}   /* El cursor se convierte en una mano */
+  
+  
+  
+  
+  /* Para que la barra de navegación se mueva */
+  nav{ position: sticky;
+       position:-webkit-sticky;/*https://www.codingnepalweb.com/2020/04/responsive-menu-bar-in-html-css.html  COMO SEGUNRA QUE NO SALE, EMPLEA MEJOR ESTE ENLACE*/
+       position:fixed;                    /*https://codepen.io* ESTA WEB TIENE COSAS CHULÍSIMAS PARA LA BARRA DE NAVEGACIÓN. pUEDES PONER ACCORDION*/
+        z-index: 99; 
+        top:0px;
+        width: 80%;
+  }                                    /* Tendrás que jugar con el ancho para que encaje perfectamente con la imagen. */
+    
+  
+  .topnav {
+      background-color: white;
+      overflow: hidden;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: grey;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 1em;
+  
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: lightgrey;
+      color: black;
+    }
+    
+    /* Add an active class to highlight the current page */
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+  
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 1000px) {   /* Tengo que probar la medida de responsabilidad jugando con el número de pixeles para que los enlaces de la barra de inicio se hagan hamburguesa */
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 1000px) {     /* Tengo que probar la medida de responsabilidad jugando con el número de pixeles para que los enlaces de la barra de inicio se hagan hamburguesa */
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  
+    #hero {position:relative;
+      background-image:url('../imagenes/portadatinta.jpg');
+      background-size: cover;
+      background-position: right;
+      height: 90vh; /* el alto en función de la pantalla del visitante */
+      }
+  
+      #hero h2 {position:absolute;      /* el título debe posicionarse sobre */
+                top:20px;               /* la foto y quedar bien contrastado:*/
+                left:15px;              /* tipografia, color, contraste, y posicionamiento */
+                color: yellow;
+                font-family:rotulo;
+                font-size:2.5em;
+                text-shadow:1px 1px 1px navy;
+                background-color:none;
+                padding:15px;
+                border-radius:0px 20px 10px 0px;
+      }
+      
+  
+      section {
+        padding-top: 50px
+        }
+      
+  
+    #wallpaperTinta {width:50%;
+                     float:left;
+                     margin-right:20px;
+                     margin-bottom:20px;
+                     text-align:left;}
+  
+    #heroTienda {width:50%;
+                     float:center;
+                     margin-right:20px;
+                     margin-bottom:20px;}
+  
+  
+                     
+  
+                     /* Slideshow container */
+                     .slideshow-container {
+                       max-width: 500px;
+                       position: relative;
+                       margin: auto;
+                     }
+                     
+                     /* Hide the images by default */
+                     .mySlides {
+                       display: none;
+                     }
+                     
+                     /* Next & previous buttons */
+                     .prev, .next {
+                       cursor: pointer;
+                       position: absolute;
+                       top: 50%;
+                       width: auto;
+                       margin-top: -22px;
+                       padding: 16px;
+                       color: red;
+                       font-weight: bold;
+                       font-size: 18px;
+                       transition: 0.6s ease;
+                       border-radius: 0 3px 3px 0;
+                       user-select: none;
+                     }
+                     
+                     /* Position the "next button" to the right */
+                     .next {
+                       right: 0;
+                       border-radius: 3px 0 0 3px;
+                     }
+                     
+                     /* On hover, add a black background color with a little bit see-through */
+                     .prev:hover, .next:hover {
+                       background-color: rgba(0,0,0,0.8);
+                     }
+                     
+                     /* Caption text */
+                     .text {
+                       color: red;
+                       font-size: 15px;
+                       padding: 8px 12px;
+                       position: absolute;
+                       bottom: 8px;
+                       width: 100%;
+                       text-align: center;
+                     }
+                     
+                     /* Number text (1/3 etc) */
+                     .numbertext {
+                       color: red;
+                       font-size: 12px;
+                       padding: 8px 12px;
+                       position: absolute;
+                       top: 0;
+                     }
+                     
+                     /* The dots/bullets/indicators */
+                     .dot {
+                       cursor: pointer;
+                       height: 15px;
+                       width: 15px;
+                       margin: 0 2px;
+                       background-color: #bbb;
+                       border-radius: 50%;
+                       display: inline-block;
+                       transition: background-color 0.6s ease;
+                     }
+                     
+                     .active, .dot:hover {
+                       background-color: #717171;
+                     }
+                     
+                     /* Fading animation */
+                     .fade {
+                       -webkit-animation-name: fade;
+                       -webkit-animation-duration: 1.5s;
+                       animation-name: fade;
+                       animation-duration: 1.5s;
+                     }
+                     
+                     @-webkit-keyframes fade {
+                       from {opacity: .4}
+                       to {opacity: 1}
+                     }
+                     
+                     @keyframes fade {
+                       from {opacity: .4}
+                       to {opacity: 1}
+                     }
+  
+  
+    .grid2col {display: block;
+               margin: auto;
+               display:grid;  /* propiedad de estilo para distribución grid */
+               grid-template-columns:50%  50%;
+           }
+      
+           .col2 {
+            padding:10%;}
+  
+            .grid4col {display:grid;
+                      grid-template-columns:auto auto auto auto ;
+   }
+   .col4 {padding:15px;
+          margin:10px;
+          background-color:white;
+          border:1px solid grey;
+          border-radius:10px;
+          box-shadow:2px 2px 2px grey;
+          transition:0.5s;}
+   .col4:hover {box-shadow:2px 4px 8px grey;}
+   .col4 img {width:100%;
+              border-radius:50%;
+              opacity:0.6;
+              transition:1s;
+              }
+   .col4 img:hover {opacity:1;}
+   .col4 .fa {font-size:6em;
+              text-align:center;
+              display:block;
+              color:orangered;}
+   .col4 button {background-color:orangered;
+                 padding:8px;
+                 border:none;
+                 color:white;
+                 font-weight:bold;
+                 border-radius:10px;
+                 display:block;
+                 margin:auto;
+                 }
+  button:hover {background-color: lightgrey;}
+  
+                 @media only screen and (max-width:900px){
+                  
+           
+                  
+                  .grid4col {grid-template-columns: 50% 50%;}
+           }
+           @media only screen and (max-width:600px){ /* tamaño de móvil */
+                  #container {width:100%;}
+                  #wallpaperTinta {width:100%;}
+                  #intro p {text-align:left;
+                            width:80%;}
+                  .grid2col{grid-template-columns: 100%;} /* modificar el grid al 100 */
+                  
+                  .grid4col {grid-template-columns: 100%;}
+                  /* .grid2col {display:block;} alternativa a lo de arriba */
+                  
+           
+                  /****** RESPONSIVIDAD A 3 Y 4 COLUMNAS *********/
+           }
+  
+           footer .fa {
+            padding: 10px;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+          }
+          
+          .fa:hover {
+              opacity: 0.7;
+          }
+          
+          .fa-facebook {
+            background: #3B5998;
+            color: white;
+          }
+          
+          .fa-twitter {
+            background: #55ACEE;
+            color: white;
+          }
+          
+          .fa-google {
+            background: #dd4b39;
+            color: white;
+          }
+          
+          .fa-linkedin {
+            background: #007bb5;
+            color: white;
+          }
+          
+          .fa-youtube {
+            background: #bb0000;
+            color: white;
+          }
+          
+          .fa-instagram {
+            background: #125688;
+            color: white;
+          }

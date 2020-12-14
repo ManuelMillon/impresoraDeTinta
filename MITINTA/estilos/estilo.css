@@ -1,0 +1,360 @@
+
+
+@font-face{
+  src: url('../tipografias/Raleway-Heavy.ttf');
+  font-family: rotulo;
+}
+@font-face{
+  src: url('../tipografias/vladivostok.regular.ttf');
+  font-family: eltexto;
+}
+
+
+.iframe-responsive {position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    padding-top: 56.25%; }
+.iframe-content {position: absolute;
+                 top: 0;
+                 left: 0;
+                 bottom: 0;
+                 right: 0;
+                 width: 100%;
+                 height: 100%;}
+
+/* CONTAINER */
+section::after { 
+  content: "";
+  display: block; 
+  clear: both;
+  margin: auto;
+}
+
+
+body {background-color: rgb( 252, 250, 252);
+      color: black;
+      font-family:eltexto;}
+
+#container {width:80%;  
+            margin:auto;}
+
+a {text-decoration:none;
+   color:lightblue;
+  }
+a:hover{color:palegreen;}   
+
+button {cursor: pointer;}  
+
+#funcionamiento {width:89%;  
+                 margin:auto;}
+
+#about {width:81%;  
+        margin:auto;}
+
+#tipos {width:80%;  
+        margin:auto;}
+
+
+
+nav{ position: sticky;
+     position:-webkit-sticky;
+     position:fixed;                    
+      z-index: 99; 
+      top:0px;
+      width: 80%;
+}                                    
+
+.topnav {
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1em;
+
+  }
+  
+  .topnav a:hover {
+    background-color: lightgrey;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+
+@media screen and (max-width: 1000px) {   
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1000px) {     
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  #hero {position:relative;
+    background-image:url('../imagenes/cabeceradefinitiva.jpg');
+    background-size: cover;
+    background-position: right;
+    height: 30vh; 
+    }
+
+    #hero h2 {position:absolute;      
+              top:20px;               
+              left:15px;              
+              color: yellow;
+              font-family:rotulo;
+              font-size:2.5em;
+              text-shadow:1px 1px 1px navy;
+              background-color:none;
+              padding:15px;
+              border-radius:0px 20px 10px 0px;
+    }
+    
+
+    section {
+      padding-top: 50px
+      }
+    
+
+  #wallpaperTinta {width:50%;
+                   float:left;
+                   margin-right:20px;
+                   margin-bottom:20px;
+                   text-align:left;}
+
+  #heroTienda {width:50%;
+                   float:center;
+                   margin-right:20px;
+                   margin-bottom:20px;}
+
+
+                   
+
+             
+                   .slideshow-container {
+                     max-width: 500px;
+                     position: relative;
+                     margin: auto;
+                   }
+                   
+               
+                   .mySlides {
+                     display: none;
+                   }
+                   
+                  
+                   .prev, .next {
+                     cursor: pointer;
+                     position: absolute;
+                     top: 50%;
+                     width: auto;
+                     margin-top: -22px;
+                     padding: 16px;
+                     color: green;
+                     font-weight: bold;
+                     font-size: 18px;
+                     transition: 0.6s ease;
+                     border-radius: 0 3px 3px 0;
+                     user-select: none;
+                   }
+                   
+                   
+                   .next {
+                     right: 0;
+                     border-radius: 3px 0 0 3px;
+                   }
+                   
+                  
+                   .prev:hover, .next:hover {
+                     background-color: rgba(0,0,0,0.8);
+                   }
+                   
+               
+                   .text {
+                     color: green;
+                     font-size: 15px;
+                     padding: 8px 12px;
+                     position: absolute;
+                     bottom: 8px;
+                     width: 100%;
+                     text-align: center;
+                   }
+                   
+
+                   .numbertext {
+                     color: green;
+                     font-size: 12px;
+                     padding: 8px 12px;
+                     position: absolute;
+                     top: 0;
+                   }
+                   
+
+                   .dot {
+                     cursor: pointer;
+                     height: 15px;
+                     width: 15px;
+                     margin: 0 2px;
+                     background-color: #bbb;
+                     border-radius: 50%;
+                     display: inline-block;
+                     transition: background-color 0.6s ease;
+                   }
+                   
+                   .active, .dot:hover {
+                     background-color: #717171;
+                   }
+                   
+
+                   .fade {
+                     -webkit-animation-name: fade;
+                     -webkit-animation-duration: 1.5s;
+                     animation-name: fade;
+                     animation-duration: 1.5s;
+                   }
+                   
+                   @-webkit-keyframes fade {
+                     from {opacity: .4}
+                     to {opacity: 1}
+                   }
+                   
+                   @keyframes fade {
+                     from {opacity: .4}
+                     to {opacity: 1}
+                   }
+
+
+  .grid2col {display: block;
+             margin: auto;
+             display:grid;  
+             grid-template-columns:50%  50%;
+         }
+    
+         .col2 {padding:10%;}
+
+          .grid4col {display:grid;
+                    grid-template-columns:auto auto auto auto ;}
+
+
+
+ .col4 {padding:15px;
+        margin:10px;
+        background-color:white;
+        border:1px solid grey;
+        border-radius:10px;
+        box-shadow:2px 2px 2px grey;
+        transition:0.5s;}
+ .col4:hover {box-shadow:2px 4px 8px grey;}
+ .col4 img {width:100%;
+            border-radius:50%;
+            opacity:0.6;
+            transition:1s;
+            }
+ .col4 img:hover {opacity:1;}
+ .col4 .fa {font-size:6em;
+            text-align:center;
+            display:block;
+            color:orangered;}
+ .col4 button {background-color:orangered;
+               padding:8px;
+               border:none;
+               color:white;
+               font-weight:bold;
+               border-radius:10px;
+               display:block;
+               margin:auto;
+               }
+button:hover {background-color: lightgrey;}
+
+               @media only screen and (max-width:900px){
+                
+         
+                
+                .grid4col {grid-template-columns: 50% 50%;}
+         }
+         @media only screen and (max-width:600px){ 
+                #container {width:100%;}
+                #wallpaperTinta {width:100%;}
+                #intro p {text-align:left;
+                          width:80%;}
+                .grid2col{grid-template-columns: 100%;} 
+                
+                .grid4col {grid-template-columns: 100%;}
+
+         }
+
+         footer .fa {
+          padding: 10px;
+          font-size: 20px;
+          width: 30px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .fa-twitter {
+          background: #55ACEE;
+          color: white;
+        }
+        
+        .fa-google {
+          background: #dd4b39;
+          color: white;
+        }
+        
+        .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+        
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        
+        .fa-instagram {
+          background: #125688;
+          color: white;
+        }
+
+
+
+
+
